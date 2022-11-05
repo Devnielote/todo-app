@@ -1,0 +1,20 @@
+.todoFilter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom: none;
+}
+
+.todoFilter span {
+    color: white;
+}
+
+.todoFilter input {
+    display: none;
+}
+
+.todoFilter input:checked ~ span {
+    color: hsl(220, 98%, 61%);
+}

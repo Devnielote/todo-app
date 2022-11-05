@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+ul {
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
   display: flex;
-  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  list-style-type: none;
+  padding-inline: 1rem;
+}
+
+li span:first-child {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-inline-end: 1rem;
+  border: 1px solid hsl(234, 11%, 52%);
+  border-radius: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+li span:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 1rem;
+  margin-inline-start: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li span:last-child img {
+  width: .8rem;
+}
+
+.main {
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+  min-width: 320px;
+  max-width: 800px;
+  left: 50%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  padding-inline: 1.5rem;
+}
+
+.standar-container {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+  background-color: hsl(235, 24%, 19%);
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.standar-container--completed {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+  background-color: hsl(235, 24%, 19%);
+  font-size: .8rem;
+}
+
+.standar-container--completed span:first-child {
+  background: rgb(87,221,255);
+  background: linear-gradient(127deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+
+.standar-container--completed p {
+  color: #494B60;
+  text-decoration-line: line-through;
+}
+
+.standar-container:nth-child(1) {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.standar-container:last-child {
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
