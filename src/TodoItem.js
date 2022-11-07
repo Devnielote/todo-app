@@ -8,14 +8,13 @@ function TodoItem(props) {
 
 const isTaskCompleted = props.isTaskComplete
 
-const onComplete = () => {
+// const onComplete = (text) => {
+//     alert(props.text + ' - (completed)')
+// }
 
-    alert(props.text + ' - (completed)')
-}
-
-const onDelete = () => {
-    alert(props.text + ' - (deleted)')
-}
+// const onDelete = () => {
+//     alert(props.text + ' - (deleted)')
+// }
 
 
 // const isComplete = props.check;
@@ -25,20 +24,20 @@ const onDelete = () => {
         {isTaskCompleted
             ? <li className="standar-container--completed">
             <span
-            onClick={onComplete} 
+            onClick={props.onComplete} 
             ><img src={iconCheck} alt="" /></span>
             <p>{props.text}</p>
             <span
-            onClick={onDelete}
+            onClick={props.onDelete}
             ><img src={iconCross} alt="" /></span>
             </li>
             :<li className="standar-container">
             <span
-            onClick={onComplete}
+            onClick={props.onComplete} 
             ><img src={iconCheck} alt="" /></span>
             <p>{props.text}</p>
             <span
-            onClick={onDelete}
+            onClick={props.onDelete}
             ><img src={iconCross} alt="" /></span>
             </li>}
         

@@ -5,17 +5,20 @@ function TodoFilter(props) {
         <>
         <div className="standar-container todoFilter">
         <label>
-        <input type={'checkbox'} id={'allTodos'}/>
+        <input type={'checkbox'} id={'allTodos'} onClick={() => {
+          props.filterAllFunc();
+        }}/>
         <span>All</span>
         </label>
         <label>
-        <input type={'checkbox'} id={'activeTodos'}/>
+        <input type={'checkbox'} id={'activeTodos'} onClick={() => {
+          props.filterActiveFunc();
+        }}/>
         <span>Active</span>
         </label>
         <label>
         <input type={'checkbox'} id={'completedTodos'} onClick={() => {
-          props.filterCompleted = true;  
-          console.log(props.filterCompleted);
+          props.filterCompletedFunc();
         }}/>
         <span>Completed</span>
         </label>
