@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import iconCheck from './images/icon-check.svg';
-import iconCross from './images/icon-cross.svg';
+import iconCheck from '../images/icon-check.svg';
+import iconCross from '../images/icon-cross.svg';
 
 
 function TodoItem(props) {

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function TodoFilter(props) {
     return(
         <>
         <div className="standar-container todoFilter">
         <label>
-        <input type={'checkbox'} id={'allTodos'} onClick={() => {
+        <input type={'checkbox'} id={'allTodos'} defaultChecked={true} onClick={() => {
           props.filterAllFunc();
         }}/>
         <span>All</span>
