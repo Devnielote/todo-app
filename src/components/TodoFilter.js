@@ -1,24 +1,35 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { TodoContext } from "./TodoContext/context";
 
 function TodoFilter(props) {
+  const { toggleFilterAll, toggleFilterActive, toggleFilterCompleted } = React.useContext(TodoContext)
     return(
         <>
         <div className="standar-container todoFilter">
         <label>
         <input type={'checkbox'} id={'allTodos'} defaultChecked={true} onClick={() => {
-          props.filterAllFunc();
+          toggleFilterAll();
+          document.querySelector('#allTodos').checked = true;
+          document.querySelector('#completedTodos').checked = false;
+          document.querySelector('#activeTodos').checked = false;
         }}/>
         <span>All</span>
         </label>
         <label>
         <input type={'checkbox'} id={'activeTodos'} onClick={() => {
-          props.filterActiveFunc();
+          toggleFilterActive();
+          document.querySelector('#activeTodos').checked = true;
+          document.querySelector('#allTodos').checked = false;
+          document.querySelector('#completedTodos').checked = false;
         }}/>
         <span>Active</span>
         </label>
         <label>
         <input type={'checkbox'} id={'completedTodos'} onClick={() => {
-          props.filterCompletedFunc();
+          toggleFilterCompleted();
+          document.querySelector('#completedTodos').checked = true;
+          document.querySelector('#allTodos').checked = false;
+          document.querySelector('#activeTodos').checked = false;
         }}/>
         <span>Completed</span>
         </label>
