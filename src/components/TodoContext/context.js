@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useLocalStorage } from './useLocalStorage';
 const TodoContext = React.createContext();
 
@@ -11,51 +12,15 @@ function TodoProvider(props) {
         toRenderItems: toRenderTodos,
         setToRenderItems: setToRenderTodos,
       } = useLocalStorage('TODOS_V1', []);
-      //TODOs to render initial state
-      
+      //State for the modal
+      const [openModal, setOpenModal] = useState(false);
+
       //Counter for the total TODOs and completed TODOs
       let completedTodosLength = todos.filter(todo => todo.completed).length;
       let totalTodos = todos.length;
       let count = totalTodos - completedTodosLength;
-    
-      //Stocked active, completed and all the TODOs
-      // let renderedTodos = [...toRenderTodos]; 
-      // const allTodos = [];
-      // const completedTodos = [];
-      // const activeTodos = [];
-      
-      // let allTodosFilter;
-      // let activeTodosFilter;
-      // let completedTodosFilter;
-      
-      // useEffect(() => {
         
-      //   todos.map(todo => {
-      //     return allTodos.push(todo)
-      //   })
-        
-      //   todos.map(todo => {
-      //     if(!todo.completed){
-      //      activeTodos.push(todo);
-      //     }
-      //     return activeTodos;
-      //   })
-    
-      //   todos.map(todo => {
-      //     if(todo.completed){
-      //       completedTodos.push(todo)
-      //     }
-      //     return completedTodos;
-      //   })
-      // });
-    
-      // useEffect(() => {
-      //   allTodosFilter = document.querySelector('#allTodos');
-      //   activeTodosFilter = document.querySelector('#activeTodos');
-      //   completedTodosFilter = document.querySelector('#completedTodos');
-      // })
-    
-      //We change the todos state depending on the filter we press
+      //We change the toRenderTodos state depending on the checked filter
       const toggleFilterAll = () => {
         const newTodos = [...todos]
         setToRenderTodos(newTodos);
@@ -80,12 +45,21 @@ function TodoProvider(props) {
           }
           return newTodos;
         })
-
         setToRenderTodos(newTodos);
       };
 
       //Complete and delete TODO functions
     
+      const addTodo = (content) => {
+        const newTodos = [...todos];
+        newTodos.push({
+          content: content,
+          completed: false,
+        });
+        saveTodos(newTodos);
+        setToRenderTodos(newTodos);
+      }
+
       const completeTodo = (content) => {
         const todoIndex = todos.findIndex(todo => todo.content === content);
         const newTodos = [...todos]
@@ -110,13 +84,16 @@ function TodoProvider(props) {
             count,
             completedTodosLength,
             toRenderTodos,
+            openModal,
 
             toggleFilterAll,
             toggleFilterActive,
             toggleFilterCompleted,
 
             completeTodo,
-            deleteTodo
+            deleteTodo,
+            setOpenModal,
+            addTodo,
         }}>
             {props.children}
         </TodoContext.Provider>

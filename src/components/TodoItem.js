@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import iconCheck from '../images/icon-check.svg';
 import iconCross from '../images/icon-cross.svg';
 

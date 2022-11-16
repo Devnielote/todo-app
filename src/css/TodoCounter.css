@@ -10,3 +10,8 @@
     font-size: .8rem;
     font-weight: bold;
 }
+
+.TodoCounter p:hover:nth-child(2) {
+    cursor: pointer;
+    color: hsl(220, 98%, 61%);
+}

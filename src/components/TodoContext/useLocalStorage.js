@@ -27,7 +27,6 @@ function useLocalStorage(itemName, initialValue){
         setIsLoading(false);
       }
     }, 1000)
-    console.log('holis')
   },[]);
     
       const saveItem = (newItem) => {

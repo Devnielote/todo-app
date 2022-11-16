@@ -1,22 +1,33 @@
-.addItemButton {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-inline-start: 1rem;
-    text-align: left;
-    border: none;
-    border-bottom: 1px solid hsl(233, 14%, 35%);
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
-    color: hsl(234, 11%, 52%);
-    font-weight: 600;
-    font-size: .7rem;
+
+
+#newTodoForm {
+    position: relative;
 }
 
-.addItemButton span {
-    margin-inline-end: 1rem;
+#newTodoForm button {
+    position: absolute;
+    top: .8rem;
+    margin-inline-start: 1rem;
     border: 1px solid hsl(234, 11%, 52%);
     border-radius: 100%;
     width: 1.2rem;
     height: 1.2rem;
+    background-color: transparent;
+}
+
+.addItemButton {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-inline-start: 3rem;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+    border-bottom-left-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+    color: hsl(234, 11%, 52%);
+    font-weight: 600;
+    font-size: .7rem;
 }

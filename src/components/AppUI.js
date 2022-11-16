@@ -12,6 +12,7 @@ import { TodoAddItem } from './TodoAddItem';
 import { TodoList } from './TodoList';
 import { TodoFilter } from './TodoFilter';
 import { TodoItem } from './TodoItem';
+import { Modal } from './modal';
 
 function AppUI() {
   const {
@@ -21,6 +22,7 @@ function AppUI() {
     toRenderTodos,
     completeTodo,
     deleteTodo,
+    openModal,
   } = React.useContext(TodoContext)
     return (
         <>
@@ -47,6 +49,11 @@ function AppUI() {
             <TodoFilter
             />
           </div>
+          {openModal && (
+            <Modal>
+              <p>Hola, perrio</p>
+            </Modal>
+          ) }
       </>
     );
     
