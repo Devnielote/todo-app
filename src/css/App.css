@@ -15,7 +15,7 @@ li span:first-child {
   align-items: center;
   justify-content: center;
   margin-inline-end: 1rem;
-  border: 1px solid hsl(234, 11%, 52%);
+  border: 1px solid #777a92;
   border-radius: 100%;
   width: 1.2rem;
   height: 1.2rem;
@@ -84,4 +84,96 @@ li span:last-child img {
 .standar-container:last-child {
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
+}
+
+.noTodoMessage__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 8rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* Skeleton loader */
+
+.standar-container--loading {
+  width: 100%;
+  height: 10rem;
+  border-radius: .5rem;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #23303d;
+  background: linear-gradient(to right, hsl(235, 24%, 19%)  8%, hsl(233, 14%, 35%) 18%, hsl(235, 24%, 19%) 33%);
+  margin-bottom: .1rem;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+}
+
+.loader-circle {
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 100%;
+}
+
+
+.loader-bar {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+}
+
+.loader-bar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 10%;
+  background: hsl(235, 24%, 19%);
+}
+
+.loader-bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 10%;
+  background: hsl(235, 24%, 19%);
+}
+
+.mask {
+  width: 100%;
+  height: 1.3rem;
+  background: hsl(235, 24%, 19%);
+}
+
+.mask:last-child{
+  position: absolute;
+  bottom: -.6rem;
+  min-width: 100%;
+  height: .6rem;
+  background: hsl(235, 24%, 19%);
+}
+
+@keyframes preloadAnimation{
+  0%{
+      background-position: -769px
+  }
+  100%{
+      background-position: 769px
+  }
 }

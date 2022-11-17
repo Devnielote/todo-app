@@ -13,7 +13,7 @@ function TodoAddItem(props) {
     
     const onSubmit = (event) => {
         event.preventDefault();
-        if(newTodoValue.length > 1){
+        if(newTodoValue.length >= 1){
             addTodo(newTodoValue);
             setNewTodoValue('')
         } else {

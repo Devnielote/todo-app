@@ -13,6 +13,7 @@ import { TodoList } from './TodoList';
 import { TodoFilter } from './TodoFilter';
 import { TodoItem } from './TodoItem';
 import { Modal } from './modal';
+import { MyLoader} from './contentLoader';
 
 function AppUI() {
   const {
@@ -31,8 +32,12 @@ function AppUI() {
             <TodoAddItem/>
             <TodoList>
               {error && <p>An error has ocurred, sowwy(っ °Д °;)っ</p>}
-              {loading && <p>Loading your TODOS...</p>}
-              {(!loading && !todos.length) && <p>Create your first TODO （￣︶￣）↗</p>}
+              {loading && <MyLoader></MyLoader>}
+              {(!loading && !todos.length) &&
+               <div className="noTodoMessage__container">
+                 <p>Create your first TODO （￣︶￣）↗</p>
+               </div>
+               }
              {toRenderTodos.map(todo =>(
               <TodoItem
               key={todo.content} 
