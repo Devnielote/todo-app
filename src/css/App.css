@@ -17,8 +17,8 @@ li span:first-child {
   margin-inline-end: 1rem;
   border: 1px solid #777a92;
   border-radius: 100%;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 25px;
+  height: 20px;
 }
 
 li span:last-child {
@@ -58,7 +58,7 @@ li span:last-child img {
 .standar-container--white {
   width: 100%;
   height: 3rem;
-  border-bottom: 1px solid #F2F2F4;
+  border-bottom: 1px solid #DAD9DF;
   background-color: white;
   font-size: .8rem;
   font-weight: bold;
@@ -80,7 +80,7 @@ li span:last-child img {
 .standar-container--completed--white {
   width: 100%;
   height: 3rem;
-  border-bottom: 1px solid #F2F2F4;
+  border-bottom: 1px solid #DAD9DF;
   background-color: white;
   font-size: .8rem;
 }
@@ -90,13 +90,13 @@ li span:last-child img {
 }
 
 .standar-container--completed span:first-child {
-  background: rgb(87,221,255);
-  background: linear-gradient(127deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+  background: rgb(87, 221, 255);
+  background: linear-gradient(127deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
 }
 
 .standar-container--completed--white span:first-child {
-  background: rgb(87,221,255);
-  background: linear-gradient(127deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+  background: rgb(87, 221, 255);
+  background: linear-gradient(127deg, rgba(87, 221, 255, 1) 0%, rgba(192, 88, 243, 1) 100%);
 }
 
 .standar-container--completed p {
@@ -148,6 +148,7 @@ li span:last-child img {
   height: 8rem;
   font-size: 2rem;
   text-align: center;
+  color:#4A4C63;
 }
 
 
@@ -163,7 +164,20 @@ li span:last-child img {
   animation-name: preloadAnimation;
   animation-timing-function: linear;
   background: #23303d;
-  background: linear-gradient(to right, hsl(235, 24%, 19%)  8%, hsl(233, 14%, 35%) 18%, hsl(235, 24%, 19%) 33%);
+  background: linear-gradient(to right, hsl(235, 24%, 19%) 8%, hsl(233, 14%, 35%) 18%, hsl(235, 24%, 19%) 33%);
+  margin-bottom: .1rem;
+}
+.standar-container--loading--white {
+  width: 100%;
+  height: 10rem;
+  border-radius: .5rem;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #23303d;
+  background: linear-gradient(to right, white 8%, grey 18%, white 33%);
   margin-bottom: .1rem;
 }
 
@@ -175,14 +189,6 @@ li span:last-child img {
   height: 50px;
   background: transparent;
 }
-
-.loader-circle {
-  width: 19px;
-  height: 19px;
-  background: red;
-  border-radius: 100%;
-}
-
 
 .loader-bar {
   position: relative;
@@ -200,6 +206,15 @@ li span:last-child img {
   background: hsl(235, 24%, 19%);
 }
 
+.loader-bar--white::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 10%;
+  background: white;
+}
+
 .loader-bar::before {
   content: '';
   position: absolute;
@@ -209,13 +224,28 @@ li span:last-child img {
   background: hsl(235, 24%, 19%);
 }
 
+.loader-bar--white::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 10%;
+  background: white;
+}
+
 .mask {
   width: 100%;
   height: 1.3rem;
   background: hsl(235, 24%, 19%);
 }
 
-.mask:last-child{
+.mask--white {
+  width: 100%;
+  height: 1.3rem;
+  background: white;
+}
+
+.mask:last-child {
   position: absolute;
   bottom: -.6rem;
   min-width: 100%;
@@ -223,11 +253,20 @@ li span:last-child img {
   background: hsl(235, 24%, 19%);
 }
 
-@keyframes preloadAnimation{
-  0%{
-      background-position: -769px
+.mask--white:last-child {
+  position: absolute;
+  bottom: -.6rem;
+  min-width: 100%;
+  height: .6rem;
+  background: white;
+}
+
+@keyframes preloadAnimation {
+  0% {
+    background-position: -769px
   }
-  100%{
-      background-position: 769px
+
+  100% {
+    background-position: 769px
   }
 }

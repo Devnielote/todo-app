@@ -4,6 +4,15 @@
     /* color: hsl(234, 39%, 85%); */
 }
 
+.todoList li {
+    height: auto;
+    padding-block: 1rem;
+}
+
+.singleTodoText__container {
+    width: 100%;
+}
+
 .todoList li span:hover {
     cursor: pointer;
 }

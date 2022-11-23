@@ -15,7 +15,12 @@ function TodoProvider(props) {
       //State for the modal
       const [openModal, setOpenModal] = useState(false);
       //State for themes
-      const [isLigthTheme, setIsLightTheme] = useState(false);
+      const useThemeDetector = () => {
+        const getCurrentTheme = window.matchMedia("(prefers-color-scheme: light)").matches;
+        return getCurrentTheme;
+      }
+      
+      const [isLigthTheme, setIsLightTheme] = useState(useThemeDetector());
 
       //Toggle function for web themes
       const toggleTheme = () => {
@@ -88,6 +93,17 @@ function TodoProvider(props) {
         setToRenderTodos(newTodos);
       }
 
+      const deleteAllCompletedTodos = () => {
+        const newTodos = [];
+        todos.map(todo => {
+          if(!todo.completed){
+            newTodos.push(todo)
+          }
+        });
+        saveTodos(newTodos);
+        setToRenderTodos(newTodos);
+      }
+
     return (
         <TodoContext.Provider value={{
             todos,
@@ -103,11 +119,12 @@ function TodoProvider(props) {
             toggleFilterActive,
             toggleFilterCompleted,
             toggleTheme,
-
+            
             completeTodo,
             deleteTodo,
             setOpenModal,
             addTodo,
+            deleteAllCompletedTodos,
         }}>
             {props.children}
         </TodoContext.Provider>

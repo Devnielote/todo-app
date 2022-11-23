@@ -15,7 +15,9 @@ function TodoItem(props) {
           <span onClick={props.onComplete}>
             <img src={iconCheck} alt="" />
           </span>
+          <div className="singleTodoText__container">
           <p>{props.text}</p>
+          </div>
           <span onClick={props.onDelete}>
             <img src={iconCross} alt="" />
           </span>
@@ -27,7 +29,9 @@ function TodoItem(props) {
           <span onClick={props.onComplete}>
             <img src={iconCheck} alt="" />
           </span>
+          <div className="singleTodoText__container">
           <p>{props.text}</p>
+          </div>
           <span onClick={props.onDelete}>
             <img src={iconCross} alt="" />
           </span>
@@ -38,7 +42,9 @@ function TodoItem(props) {
        <span onClick={props.onComplete}>
          <img src={iconCheck} alt="" />
        </span>
+       <div className="singleTodoText__container">
        <p>{props.text}</p>
+       </div>
        <span onClick={props.onDelete}>
          <img src={iconCross} alt="" />
        </span>
@@ -49,7 +55,9 @@ function TodoItem(props) {
          <span onClick={props.onComplete}>
            <img src={iconCheck} alt="" />
          </span>
+         <div className="singleTodoText__container">
          <p>{props.text}</p>
+         </div>
          <span onClick={props.onDelete}>
            <img src={iconCross} alt="" />
          </span>

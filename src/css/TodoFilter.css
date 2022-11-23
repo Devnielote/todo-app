@@ -5,6 +5,9 @@
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
     border-bottom: none;
+    box-shadow: -3px 14px 30px -13px rgba(0,0,0,0.75);
+-webkit-box-shadow: -3px 14px 30px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: -3px 14px 30px -13px rgba(0,0,0,0.75);
 }
 
 .todoFilter input {

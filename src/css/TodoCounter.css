@@ -9,6 +9,9 @@
     color: hsl(234, 11%, 52%);
     font-size: .8rem;
     font-weight: bold;
+    box-shadow: -3px 14px 30px -13px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px 14px 30px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 14px 30px -13px rgba(0,0,0,0.75);
 }
 
 .TodoCounter {
@@ -27,6 +30,11 @@
 
 
 .TodoCounter p:hover:nth-child(2) {
+    cursor: pointer;
+    color: hsl(220, 98%, 61%);
+}
+
+.TodoCounter--white p:hover:nth-child(2) {
     cursor: pointer;
     color: hsl(220, 98%, 61%);
 }
