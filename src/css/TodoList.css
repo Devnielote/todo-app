@@ -1,5 +1,9 @@
 .todoList {
     margin-block: 1rem;
     font-size: .8rem;
-    color: hsl(234, 39%, 85%);
+    /* color: hsl(234, 39%, 85%); */
+}
+
+.todoList li span:hover {
+    cursor: pointer;
 }

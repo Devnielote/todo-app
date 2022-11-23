@@ -12,8 +12,8 @@ import { TodoAddItem } from './TodoAddItem';
 import { TodoList } from './TodoList';
 import { TodoFilter } from './TodoFilter';
 import { TodoItem } from './TodoItem';
-import { Modal } from './modal';
 import { MyLoader} from './contentLoader';
+import { ToggleTheme } from './ThemeButton';
 
 function AppUI() {
   const {
@@ -23,8 +23,8 @@ function AppUI() {
     toRenderTodos,
     completeTodo,
     deleteTodo,
-    openModal,
   } = React.useContext(TodoContext)
+
     return (
         <>
         <Header/>
@@ -51,14 +51,10 @@ function AppUI() {
             <TodoCounter
              />
             </TodoList>
+            
             <TodoFilter
             />
           </div>
-          {openModal && (
-            <Modal>
-              <p>Hola, perrio</p>
-            </Modal>
-          ) }
       </>
     );
     

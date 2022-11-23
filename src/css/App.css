@@ -38,7 +38,7 @@ li span:last-child img {
   top: 8rem;
   width: 100%;
   min-width: 320px;
-  max-width: 800px;
+  max-width: 550px;
   left: 50%;
   -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
@@ -52,6 +52,21 @@ li span:last-child img {
   background-color: hsl(235, 24%, 19%);
   font-size: .8rem;
   font-weight: bold;
+  color: hsl(234, 39%, 85%);
+}
+
+.standar-container--white {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #F2F2F4;
+  background-color: white;
+  font-size: .8rem;
+  font-weight: bold;
+  color: #8E90A1;
+}
+
+.standar-container--white span:first-child {
+  border: 1px solid hsl(234, 39%, 85%);
 }
 
 .standar-container--completed {
@@ -62,7 +77,24 @@ li span:last-child img {
   font-size: .8rem;
 }
 
+.standar-container--completed--white {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #F2F2F4;
+  background-color: white;
+  font-size: .8rem;
+}
+
+.standar-container--completed--white span:first-child {
+  border: none;
+}
+
 .standar-container--completed span:first-child {
+  background: rgb(87,221,255);
+  background: linear-gradient(127deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+
+.standar-container--completed--white span:first-child {
   background: rgb(87,221,255);
   background: linear-gradient(127deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
 }
@@ -72,16 +104,38 @@ li span:last-child img {
   text-decoration-line: line-through;
 }
 
+.standar-container--completed--white p {
+  font-weight: bold;
+  color: hsl(234, 39%, 85%);
+  text-decoration-line: line-through;
+}
+
 .standar-container:nth-child(1) {
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
 }
+
+.standar-container--white:nth-child(1) {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
 .standar-container--completed:nth-child(1) {
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
 }
 
+.standar-container--completed--white:nth-child(1) {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
 .standar-container:last-child {
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.standar-container--white:last-child {
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
 }

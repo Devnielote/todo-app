@@ -7,12 +7,12 @@
     border-bottom: none;
 }
 
-.todoFilter span {
-    color: white;
-}
-
 .todoFilter input {
     display: none;
+}
+
+.todoFilter span:hover {
+    cursor: pointer;
 }
 
 .todoFilter input:checked ~ span {

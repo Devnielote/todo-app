@@ -14,6 +14,18 @@ function TodoProvider(props) {
       } = useLocalStorage('TODOS_V1', []);
       //State for the modal
       const [openModal, setOpenModal] = useState(false);
+      //State for themes
+      const [isLigthTheme, setIsLightTheme] = useState(false);
+
+      //Toggle function for web themes
+      const toggleTheme = () => {
+        setIsLightTheme(current => !current);
+      }
+      if(isLigthTheme){
+        document.body.style.backgroundColor = 'white'
+      } else if(!isLigthTheme) {
+        document.body.style.backgroundColor = '#161722';
+      }
 
       //Counter for the total TODOs and completed TODOs
       let completedTodosLength = todos.filter(todo => todo.completed).length;
@@ -85,10 +97,12 @@ function TodoProvider(props) {
             completedTodosLength,
             toRenderTodos,
             openModal,
+            isLigthTheme,
 
             toggleFilterAll,
             toggleFilterActive,
             toggleFilterCompleted,
+            toggleTheme,
 
             completeTodo,
             deleteTodo,

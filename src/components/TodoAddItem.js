@@ -4,7 +4,7 @@ import { TodoContext } from "./TodoContext/context";
 function TodoAddItem(props) {
     const [newTodoValue, setNewTodoValue] = React.useState('');
 
-    const { addTodo } = React.useContext(TodoContext);
+    const { addTodo, isLigthTheme } = React.useContext(TodoContext);
 
     // const { setOpenModal } = useContext(TodoContext);
     const onChange = (event) => {
@@ -23,9 +23,19 @@ function TodoAddItem(props) {
 
     return (
         <>
-        {/* <button
-        onClick={() => setOpenModal(true)}
-        className="standar-container addItemButton"> <span></span> Create a new todo</button> */}
+        {isLigthTheme &&
+        <form id="newTodoForm" action="">
+            <input
+            type="text"
+            value={newTodoValue}
+            onChange={onChange}
+            className="standar-container--white addItemButton"
+            placeholder={"Create a new todo"}
+            />
+            <button type="submit" onClick={onSubmit}></button>
+        </form>
+        }
+        {!isLigthTheme && 
         <form id="newTodoForm" action="">
             <input
             type="text"
@@ -36,6 +46,7 @@ function TodoAddItem(props) {
             />
             <button type="submit" onClick={onSubmit}></button>
         </form>
+        }
         </>
     )
 }

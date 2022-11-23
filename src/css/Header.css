@@ -1,4 +1,4 @@
-.header {
+.header__bg--dark {
     position: relative;
     min-width: 320px;
     max-width: 100%;
@@ -10,11 +10,51 @@
     background-size: cover;
   }
 
+.header__bg--ligth {
+  position: relative;
+  min-width: 320px;
+  max-width: 100%;
+  width: 100%;
+  height: 23vh;
+  background-image: url('../images/bg-mobile-light.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1 {
     margin: 0;
-    padding-top: 30px;
-    padding-left: 20px;
     font-weight: bold;
     color: white;
     letter-spacing: .7rem;
 }
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 320px;
+  max-width: 550px;
+  margin: 0 auto;
+  height: 60%;
+  padding-inline: 1.5rem;
+}
+
+.themeToggle {
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+}
+
+.themeToggle:hover {
+  cursor: pointer;
+}
+
+.themeToggle img {
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+

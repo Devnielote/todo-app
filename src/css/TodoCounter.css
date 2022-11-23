@@ -1,3 +1,16 @@
+.TodoCounter--white {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border-bottom: 1px solid #F2F2F4;
+    color: hsl(234, 11%, 52%);
+    font-size: .8rem;
+    font-weight: bold;
+}
+
 .TodoCounter {
     display: flex;
     align-items: center;
@@ -10,6 +23,8 @@
     font-size: .8rem;
     font-weight: bold;
 }
+
+
 
 .TodoCounter p:hover:nth-child(2) {
     cursor: pointer;
