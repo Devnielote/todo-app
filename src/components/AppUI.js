@@ -31,11 +31,11 @@ function AppUI() {
             <div className="main">
             <TodoAddItem/>
             <TodoList>
-              {error && <p>An error has ocurred, sowwy(っ °Д °;)っ</p>}
+              {error && <p>An error has ocurred</p>}
               {loading && <MyLoader></MyLoader>}
               {(!loading && !todos.length) &&
                <div className="noTodoMessage__container">
-                 <p>Create your first TODO （￣︶￣）↗</p>
+                 <p>Create your first TODO</p>
                </div>
                }
              {toRenderTodos.map(todo =>(

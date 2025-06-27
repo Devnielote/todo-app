@@ -80,7 +80,7 @@ function TodoProvider(props) {
       const completeTodo = (content) => {
         const todoIndex = todos.findIndex(todo => todo.content === content);
         const newTodos = [...todos]
-        newTodos[todoIndex].completed = true;
+        newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
         saveTodos(newTodos);
         setToRenderTodos(newTodos);
       }
@@ -104,6 +104,15 @@ function TodoProvider(props) {
         setToRenderTodos(newTodos);
       }
 
+      const reorderTodos = (startIndex, endIndex) => {
+        const newTodos = Array.from(toRenderTodos);
+        const [movedItem] = newTodos.splice(startIndex, 1);
+        newTodos.splice(endIndex, 0, movedItem);
+        
+        setToRenderTodos(newTodos);
+        saveTodos(newTodos);
+      }
+
     return (
         <TodoContext.Provider value={{
             todos,
@@ -125,6 +134,7 @@ function TodoProvider(props) {
             setOpenModal,
             addTodo,
             deleteAllCompletedTodos,
+            reorderTodos,
         }}>
             {props.children}
         </TodoContext.Provider>

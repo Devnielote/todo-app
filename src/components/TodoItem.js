@@ -40,7 +40,6 @@ function TodoItem(props) {
       {!isTaskCompleted && isLigthTheme &&
        <li className="standar-container--white">
        <span onClick={props.onComplete}>
-         <img src={iconCheck} alt="" />
        </span>
        <div className="singleTodoText__container">
        <p>{props.text}</p>
@@ -53,7 +52,6 @@ function TodoItem(props) {
       {!isTaskCompleted && !isLigthTheme &&
          <li className="standar-container">
          <span onClick={props.onComplete}>
-           <img src={iconCheck} alt="" />
          </span>
          <div className="singleTodoText__container">
          <p>{props.text}</p>
