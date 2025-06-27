@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/curso-intro-react/static/css/main.adeecaea.css",
-    "main.js": "/curso-intro-react/static/js/main.e67d1a2e.js",
+    "main.css": "/curso-intro-react/static/css/main.5ba1a341.css",
+    "main.js": "/curso-intro-react/static/js/main.9741f9b4.js",
     "index.html": "/curso-intro-react/index.html",
     "static/media/icon-sun.svg": "/curso-intro-react/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
     "static/media/icon-moon.svg": "/curso-intro-react/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
     "static/media/icon-cross.svg": "/curso-intro-react/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
     "static/media/icon-check.svg": "/curso-intro-react/static/media/icon-check.a8fb15d0278c8e312df5fc8364fef863.svg",
-    "main.adeecaea.css.map": "/curso-intro-react/static/css/main.adeecaea.css.map",
-    "main.e67d1a2e.js.map": "/curso-intro-react/static/js/main.e67d1a2e.js.map"
+    "main.5ba1a341.css.map": "/curso-intro-react/static/css/main.5ba1a341.css.map",
+    "main.9741f9b4.js.map": "/curso-intro-react/static/js/main.9741f9b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.adeecaea.css",
-    "static/js/main.e67d1a2e.js"
+    "static/css/main.5ba1a341.css",
+    "static/js/main.9741f9b4.js"
   ]
 }
