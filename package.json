@@ -10,7 +10,7 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-content-loader": "^6.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^6.3.0"
   },
   "homepage": "https://devnielote.github.io/curso-intro-react"
 }
