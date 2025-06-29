@@ -1,2 +1,2 @@
 # TODO APP
-- ![]("src/images/todo-desktop.png")
+- ![](src/images/todo-desktop.png)
